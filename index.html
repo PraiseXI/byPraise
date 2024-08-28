@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>byPraise</title>
+    <meta
+      name="description"
+      content="A software engineer, photographer and builder, passionate about pursing whatever I find interesting."
+    />
+
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        height: 100%;
+        background-color: #ffffff;
+        color: #333333;
+      }
+      .container {
+        display: flex;
+        height: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .sidebar {
+        width: 200px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+      }
+      .content {
+        flex-grow: 1;
+        padding: 20px;
+        overflow-y: auto;
+        width: calc(100% - 240px); /* 200px sidebar + 40px padding */
+        max-width: 600px; /* Adjust this value as needed */
+      }
+      .logo {
+        font-weight: bold;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+      nav ul li {
+        margin-bottom: 10px;
+        opacity: 0.5;
+      }
+      nav ul li.active {
+        opacity: 1;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: #333333;
+      }
+      .page {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+      .page.active {
+        display: block;
+        opacity: 1;
+      }
+      h2 {
+        font-weight: normal;
+        font-size: 18px;
+        margin-top: 0;
+      }
+      p {
+        line-height: 1.6;
+      }
+      .work-item {
+        margin-bottom: 20px;
+      }
+      .work-item h3 {
+        font-weight: normal;
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+      .work-item p {
+        margin: 0;
+        font-size: 14px;
+      }
+      .archive {
+        margin-top: auto;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <div class="logo">byPraise°</div>
+        <nav>
+          <ul>
+            <li class="active"><a href="#" data-page="about">00. About</a></li>
+            <li><a href="#" data-page="works">01. Works</a></li>
+            <li><a href="#" data-page="playground">02. Playground</a></li>
+            <li><a href="#" data-page="resume">03. Resume</a></li>
+            <li><a href="#" data-page="contact">04. Contact</a></li>
+          </ul>
+        </nav>
+        <div class="archive">
+          Archive<br />
+          Jakarta, Indonesia 23:34:47
+        </div>
+      </div>
+      <div class="content">
+        <div id="about" class="page active">
+          <h2>Hello, I'm Joesak - product designer at Gotrade.</h2>
+          <p>Formerly at tiket.com.</p>
+          <p>I'm a graphic turned product designer.</p>
+          <p>
+            I strongly believe in simplicity, just enough research, and
+            combining aesthetics and problem-solving as a driver of great and
+            delightful user experience.
+          </p>
+          <p>
+            I thrive in fast-paced environments and enjoy collaborating with
+            interdisciplinary teams - from product, engineering, marketing to
+            customer experience.
+          </p>
+          <p>
+            My enthusiasm sparks for Swiss design, environmental graphic design,
+            accessibility, typography, design systems, animations, and the
+            thrill of creating beautiful interfaces.
+          </p>
+          <p>
+            When I'm not creating, you'll find me immersed in video games, at
+            the gym, swimming, or listening to wave to earth.
+          </p>
+          <p>
+            Currently, I'm learning SwiftUI to work on an experimental project
+            I've envisioned. I'll add it to the Playground once it finished.
+            Stay tuned!
+          </p>
+        </div>
+        <div id="works" class="page">
+          <div class="work-item">
+            <h3>
+              Gotrade Transforming a single-asset investing app into a
+              multi-asset platform
+            </h3>
+            <p>April-May 2024</p>
+          </div>
+          <div class="work-item">
+            <h3>tiket.com A fresh take on the account page</h3>
+            <p>May-July 2021</p>
+          </div>
+        </div>
+        <div id="playground" class="page">
+          <h2>Playground content goes here.</h2>
+        </div>
+        <div id="resume" class="page">
+          <h2>2022-present Gotrade Sr. Product Designer</h2>
+          <p>
+            Transforming a single-asset investing app into a multi-asset
+            platform
+          </p>
+          <p>Built design system</p>
+          <p>Designed trading signals feature</p>
+          <p>Designed advanced order types</p>
+          <p>Designed advanced charts and technical indicators</p>
+          <p>Designed extended-hours trading experience</p>
+
+          <h2>2019-2022 tiket.com Junior - Mid. Product Designer</h2>
+          <p>Redesigned account page</p>
+          <p>Redesigned loyalty program</p>
+          <p>Directed tiket.com's new typeface - Odyssey</p>
+          <p>Built in-app chat platform</p>
+          <p>Designed cross-selling feature</p>
+          <p>Designed dedicated customer service experience</p>
+          <p>
+            Designed design team's side projects such as deck template design,
+            souvenirs design, publication posters, CPO's Town Hall deck
+          </p>
+
+          <p><a href="#">See detailed resume</a></p>
+        </div>
+        <div id="contact" class="page">
+          <h2>Get in touch with me at joesak.josefianoes@gmail.com</h2>
+          <p>or shoot me a message on <a href="#">LinkedIn</a></p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", event => {
+        const links = document.querySelectorAll("nav a");
+        const pages = document.querySelectorAll(".page");
+
+        links.forEach(link => {
+          link.addEventListener("click", e => {
+            e.preventDefault();
+            const pageId = link.getAttribute("data-page");
+            pages.forEach(page => {
+              if (page.id === pageId) {
+                page.classList.add("active");
+              } else {
+                page.classList.remove("active");
+              }
+            });
+            links.forEach(l => l.parentElement.classList.remove("active"));
+            link.parentElement.classList.add("active");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
